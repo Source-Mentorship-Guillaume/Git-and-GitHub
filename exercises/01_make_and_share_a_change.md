@@ -10,9 +10,16 @@ Git's whole idea is to allow for different people to work together on the same c
   git branch mybranch-<your-name>
   ```
   >***Note***: Everytime you see `<your-name>` in a command, please remember to replace it with your actual name! For example `git branch mybranch-guillaume`
-- Type the command `git branch` to make sure that your current branch is `mybranch-<your-name>` - it should have a `*` before it.
+- Change your current branch to it by typing:
+  ```
+  git checkout mybranch-<your-name>
+  ```
+- Type the command `git branch` to make sure that your current branch is `mybranch-<your-name>` - it should have a `*` before it. (type `q` to exit the branches list)
+
 
 That's it, now everything we change will be changed in this branch, not the `main` one, so we can do what we want!
+
+> Pro tip: You can create and move to a new branch with one single command: `git checkout -b <your-branch-name>` --- `git checkout` means "change branch" and the `-b` means "create the branch if it doesn't exist yet".
 
 
 ### Make changes and record them
@@ -95,4 +102,24 @@ Since we're working with GitHub, we'll create what is called a **Pull Request** 
   Great, let's run this command now!
 
   This should give us an output like:
-  
+
+  ![push output](./screenshots/push-set-upstream.png)
+
+  This is a bit complex but all Git is telling us is that it created a branch on Github to mirror our local one. Github actually tells us we can create a Pull Request byt giving us a url:
+  ```
+  remote: Create a pull request for 'mybranch-guillaume' on GitHub by visiting:
+  remote:      https://github.com/Source-Mentorship-Guillaume/Git-and-GitHub/pull/new/mybranch-<your-name>
+  ```
+  Great let's do that!
+
+### Final step: Creating a PR (pull request)
+
+Follow the link given to you when you pushed. You should have a page similar to this:
+
+![pull request](./screenshots/pull-request-github.png)
+
+At the top of the page, you can see that we're requesting for "mybranch-guillaume" to be merged into "main".
+Write a descriptive title and description, and click "Create pull request".
+
+That's it! Now we can wait for a teammate to review our changes, and approve them, or request further changes! 
+>***Note***: A pull request is generally a great place for feedback, comments, and collaboration between implementer (the person who made the changes), and the reviewer! Reviews in programming are crucial to make sure no bug slipped through or that the code respects the styles guidelines of the team, and help keeping code quality to high standard.
