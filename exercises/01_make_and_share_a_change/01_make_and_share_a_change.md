@@ -23,6 +23,7 @@ That's it, now everything we change will be changed in this branch, not the `mai
 
 
 ### Make changes and record them
+- Open the `poem.txt` file. This is the file we will be using for the purpose of this exercise.
 - Change the last two lines in the poem from:
   ```
   I've changed this file
@@ -43,7 +44,7 @@ That's it, now everything we change will be changed in this branch, not the `mai
   ```
   git status
   ```
-  Here, `poem.txt` will be list as having been modified.
+  Here, `poem.txt` will be listed as having been modified.
 
 - Let's commit these changes. Committing is like setting a *save-point* in our work. After we commit, we can make any changes we can always go back to this point in time, and see our files as they are now. We'll see this later. For now:
   - First we *stage* the changes with `git add`, which tells git which files we want in our next commit. In this case we have only `poem.txt`. But we might, for example, also have a file `poem2.txt`, which we changed too but don't want to commit yet.
@@ -103,7 +104,7 @@ Since we're working with GitHub, we'll create what is called a **Pull Request** 
 
   This should give us an output like:
 
-  ![push output](./screenshots/push-set-upstream.png)
+  ![push output](../screenshots/push-set-upstream.png)
 
   This is a bit complex but all Git is telling us is that it created a branch on Github to mirror our local one. Github actually tells us we can create a Pull Request byt giving us a url:
   ```
@@ -116,7 +117,7 @@ Since we're working with GitHub, we'll create what is called a **Pull Request** 
 
 Follow the link given to you when you pushed. You should have a page similar to this:
 
-![pull request](./screenshots/pull-request-github.png)
+![pull request](../screenshots/pull-request-github.png)
 
 At the top of the page, you can see that we're requesting for "mybranch-guillaume" to be merged into "main".
 Write a descriptive title and description, and click "Create pull request".
